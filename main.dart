@@ -1,7 +1,7 @@
 import 'dart:html';
 
 void main() {
-  if (window.location.search.split("&").length > 3) redirect();
+  if (window.location.search.split("&").length >= 3) redirect();
   AnchorElement generateButton = querySelector("#generateButton");
 
   generateButton.onClick.listen((event) {

@@ -3095,7 +3095,7 @@
   F = {
     main: function() {
       var generateButton, t1, t2;
-      if (window.location.search.split("&").length > 3)
+      if (window.location.search.split("&").length >= 3)
         F.redirect();
       generateButton = type$.AnchorElement._as(document.querySelector("#generateButton"));
       generateButton.toString;
