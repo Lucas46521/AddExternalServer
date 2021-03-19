@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload = function(){
+
+        let urlAsMap = {};
+        let url = location.search.substring(1).split('&');
+        url.forEach(value => {
+            let valueAsList = value.split("=");
+            urlAsMap[valueAsList[0]] = valueAsList[1];
+        });
+
+        let name = urlAsMap["name"];
+        let ip = urlAsMap["ip"];
+        let port = urlAsMap["port"];
+
+        document.location= `minecraft:?addExternalServer=${name}|${ip}:${port}`
+    }
+</script>
+</body>
+</html>
