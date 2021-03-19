@@ -58,7 +58,7 @@ String generateRedirectUrlFromInput() {
 }
 
 void redirect() {
-  var url = window.location.search.split("&");
+  var url = window.location.search.substring(1).split("&");
 
   Map<String, String> urlAsMap = {};
   url.forEach((element) {

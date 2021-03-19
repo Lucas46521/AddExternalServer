@@ -2339,6 +2339,15 @@
         return receiver;
       return J.getNativeInterceptor(receiver);
     },
+    getInterceptor$s: function(receiver) {
+      if (typeof receiver == "string")
+        return J.JSString.prototype;
+      if (receiver == null)
+        return receiver;
+      if (!(receiver instanceof P.Object))
+        return J.UnknownJavaScriptObject.prototype;
+      return receiver;
+    },
     getInterceptor$x: function(receiver) {
       if (receiver == null)
         return receiver;
@@ -2371,6 +2380,9 @@
     },
     _addEventListener$3$x: function(receiver, a0, a1, a2) {
       return J.getInterceptor$x(receiver)._addEventListener$3(receiver, a0, a1, a2);
+    },
+    substring$1$s: function(receiver, a0) {
+      return J.getInterceptor$s(receiver).substring$1(receiver, a0);
     },
     toString$0$: function(receiver) {
       return J.getInterceptor$(receiver).toString$0(receiver);
@@ -3119,7 +3131,7 @@
       var $name, ip, port,
         t1 = type$.String,
         urlAsMap = P.LinkedHashMap_LinkedHashMap$_empty(t1, t1);
-      C.JSArray_methods.forEach$1(H.setRuntimeTypeInfo(window.location.search.split("&"), type$.JSArray_String), new F.redirect_closure(urlAsMap));
+      C.JSArray_methods.forEach$1(H.setRuntimeTypeInfo(J.substring$1$s(window.location.search, 1).split("&"), type$.JSArray_String), new F.redirect_closure(urlAsMap));
       $name = urlAsMap.$index(0, "name");
       ip = urlAsMap.$index(0, "ip");
       port = urlAsMap.$index(0, "port");
@@ -3284,6 +3296,20 @@
       if (typeof other != "string")
         throw H.wrapException(P.ArgumentError$value(other, null, null));
       return receiver + other;
+    },
+    substring$2: function(receiver, startIndex, endIndex) {
+      if (endIndex == null)
+        endIndex = receiver.length;
+      if (startIndex < 0)
+        throw H.wrapException(P.RangeError$value(startIndex, null));
+      if (startIndex > endIndex)
+        throw H.wrapException(P.RangeError$value(startIndex, null));
+      if (endIndex > receiver.length)
+        throw H.wrapException(P.RangeError$value(endIndex, null));
+      return receiver.substring(startIndex, endIndex);
+    },
+    substring$1: function($receiver, startIndex) {
+      return this.substring$2($receiver, startIndex, null);
     },
     toString$0: function(receiver) {
       return receiver;
