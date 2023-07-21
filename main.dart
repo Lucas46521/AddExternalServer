@@ -3,11 +3,15 @@ import 'dart:html';
 void main() {
   if (window.location.search.split("&").length >= 3) redirect();
   AnchorElement generateButton = querySelector("#generateButton");
-  AnchorElement exportButton = querySelector("#exportButton"); // Novo botão "Exportar"
-  
+  AnchorElement exportButton = querySelector("#exportButton");
+
+  // Evento de clique no botão "Exportar"
   exportButton.onClick.listen((event) {
-    TextAreaElement redirectUrlTextArea = querySelector("#redirectUrlText");
-    copyText(redirectUrlTextArea.text);
+    // Obter a URL gerada pelo botão "Exportar"
+    String redirectUrl = generateRedirectUrlFromInput();
+
+    // Redirecionar o usuário para a URL gerada
+    window.location.href = redirectUrl;
   });
   
   generateButton.onClick.listen((event) {
