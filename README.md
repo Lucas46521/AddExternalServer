@@ -1,1 +1,1 @@
-https://suinua.github.io/AddExternalServer/
+https://lucas46521.github.io/AddExternalServer/
