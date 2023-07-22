@@ -7,7 +7,9 @@ void main() {
 
   // Evento de clique no botão "Exportar"
   exportButton.onClick.listen((event) {
-    window.location.href = generateUrl();
+    function Redirect() {
+            location.href=generateUrl();
+    }
   });
   
   generateButton.onClick.listen((event) {
@@ -43,7 +45,7 @@ void copyText(String copyText) {
 }
 
 String generateUrl(String name, String ip, String port) {
-  return "https://suinua.github.io/AddExternalServer/?name=${name}&ip=${ip}&port=${port}";
+  return "https://Lucas46521.github.io/AddExternalServer/?name=${name}&ip=${ip}&port=${port}";
 }
 
 
