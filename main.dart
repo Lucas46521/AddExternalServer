@@ -3,22 +3,11 @@ import 'dart:html';
 void main() {
   if (window.location.search.split("&").length >= 3) redirect();
   AnchorElement generateButton = querySelector("#generateButton");
-  AnchorElement exportButton = querySelector("#exportButton");
-
-  // Evento de clique no botão "Exportar"
-  exportButton.onClick.listen((event) {
-    String redirectUrl = generateRedirectUrlFromInput();
-
-    // Imprimir a URL no console para depurar
-    print(redirectUrl);
-
-    // Redirecionar o usuário para a URL gerada
-    window.location.assign(redirectUrl);
-  });
   
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
     AnchorElement copyRedirectUrlTextButton = querySelector("#copyRedirectUrlTextButton");
+    AnchorElement exportButton = querySelector("#exportButton");
 
     TextAreaElement urlTextArea = querySelector("#urlText");
     TextAreaElement redirectUrlTextArea = querySelector("#redirectUrlText");
@@ -31,6 +20,7 @@ void main() {
     copyUrlTextButton.style.display = "";
     copyRedirectUrlTextButton.style.display = "";
 
+    exportButton.onClick.listen((_) => redirect());
     copyUrlTextButton.onClick.listen((_) => copyText(urlTextArea.text));
     copyRedirectUrlTextButton.onClick.listen((_) => copyText(redirectUrlTextArea.text));
   });
