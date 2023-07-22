@@ -7,9 +7,7 @@ void main() {
 
   // Evento de clique no botão "Exportar"
   exportButton.onClick.listen((event) {
-    function Redirect() {
             location.href=generateUrl();
-    }
   });
   
   generateButton.onClick.listen((event) {
