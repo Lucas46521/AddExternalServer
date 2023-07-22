@@ -8,11 +8,7 @@ void main() {
   // Evento de clique no botão "Exportar"
   exportButton.onClick.listen((event) {
     // Obter a URL gerada pelo botão "Exportar"
-    String redirectUrl = generateRedirectUrlFromInput();
-
-    // Redirecionar o usuário para a URL gerada
-    window.location.href = generateRedirectUrlFromInput();
-
+    window.location.href = generateUrl();
   });
   
   generateButton.onClick.listen((event) {
