@@ -13,7 +13,7 @@ void main() {
     print(redirectUrl);
 
     // Redirecionar o usuário para a URL gerada
-    window.location.href = redirectUrl;
+    window.location.assign(redirectUrl);
   });
   
   generateButton.onClick.listen((event) {
