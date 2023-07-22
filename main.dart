@@ -11,7 +11,7 @@ void main() {
     String redirectUrl = generateRedirectUrlFromInput();
 
     // Redirecionar o usuário para a URL gerada
-    window.location.href = redirectUrl target="_blank";
+    window.location = redirectUrl target="_blank";
   });
   
   generateButton.onClick.listen((event) {
