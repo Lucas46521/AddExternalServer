@@ -20,7 +20,7 @@ void main() {
     copyUrlTextButton.style.display = "";
     copyRedirectUrlTextButton.style.display = "";
 
-    exportButton.onClick.listen((_) => redirect());
+    exportButton.onClick.listen((_) => html.window.open(urlTextArea.text));
     copyUrlTextButton.onClick.listen((_) => copyText(urlTextArea.text));
     copyRedirectUrlTextButton.onClick.listen((_) => copyText(redirectUrlTextArea.text));
   });
