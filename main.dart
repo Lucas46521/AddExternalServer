@@ -7,9 +7,14 @@ void main() {
 
   // Evento de clique no botão "Exportar"
   exportButton.onClick.listen((event) {
-    // Chamar a função JavaScript de redirecionamento
-    redirect();
+    // Obter o texto da urlTextArea
+    TextAreaElement urlTextArea = querySelector("#urlText");
+    String link = urlTextArea.text;
+
+    // Redirecionar o usuário para o link obtido da urlTextArea
+    window.location.href = link;
   });
+}
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
     AnchorElement copyRedirectUrlTextButton = querySelector("#copyRedirectUrlTextButton");
