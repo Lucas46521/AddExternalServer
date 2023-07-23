@@ -12,7 +12,7 @@ void main() {
     String link = urlTextArea.text;
 
     // Redirecionar o usuário para o link obtido da urlTextArea
-    window.location.href = link;
+    window.location.assign(link);
   });
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
