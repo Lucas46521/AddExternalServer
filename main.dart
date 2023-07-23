@@ -3,12 +3,32 @@ import 'dart:html';
 void main() {
   if (window.location.search.split("&").length >= 3) redirect();
   AnchorElement generateButton = querySelector("#generateButton");
+  AnchorElement exportButton = querySelector("#exportButton");
+  
+  // Evento de clique no botão "Exportar"
+  exportButton.onClick.listen((event) {
+    // Chamar a função de exportação com o link da urlTextArea
+    exportFunction();
+  });
+
+  // Restante do seu código existente
+}
+
+// Função que será chamada quando o botão "Exportar" for clicado
+void exportFunction() {
+  // Obter o texto da urlTextArea
+  TextAreaElement urlTextArea = querySelector("#urlText");
+  String link = urlTextArea.text;
+
+  // Redirecionar o usuário para o link obtido da urlTextArea
+  window.location.href = link;
+}
+  
   
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
     AnchorElement copyRedirectUrlTextButton = querySelector("#copyRedirectUrlTextButton");
-    AnchorElement exportButton = querySelector("#exportButton");
-
+    
     TextAreaElement urlTextArea = querySelector("#urlText");
     TextAreaElement redirectUrlTextArea = querySelector("#redirectUrlText");
 
@@ -20,7 +40,6 @@ void main() {
     copyUrlTextButton.style.display = "";
     copyRedirectUrlTextButton.style.display = "";
 
-    exportButton.onClick.listen((_) => html.window.open(urlTextArea.text));
     copyUrlTextButton.onClick.listen((_) => copyText(urlTextArea.text));
     copyRedirectUrlTextButton.onClick.listen((_) => copyText(redirectUrlTextArea.text));
   });
