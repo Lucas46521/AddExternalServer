@@ -14,7 +14,6 @@ void main() {
     // Redirecionar o usuário para o link obtido da urlTextArea
     window.location.href = link;
   });
-}
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
     AnchorElement copyRedirectUrlTextButton = querySelector("#copyRedirectUrlTextButton");
