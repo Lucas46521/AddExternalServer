@@ -6,13 +6,16 @@ void main() {
   AnchorElement exportButton = querySelector("#exportButton");
 
   // Evento de clique no botão "Exportar"
+  ButtonElement exportButton = querySelector("#exportButton");
+
+  // Evento de clique no botão "Exportar"
   exportButton.onClick.listen((event) {
     // Obter o texto da urlTextArea
     TextAreaElement urlTextArea = querySelector("#urlText");
     String link = urlTextArea.text;
 
     // Redirecionar o usuário para o link obtido da urlTextArea
-    window.location.assign(link);
+    window.location.href = link;
   });
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
