@@ -24,7 +24,7 @@ void main() {
     String url = genUrl(name, ip, port);
 
     // Redirecionar o usuário para a URL gerada
-    redirectToExternalPage(url);
+    return url;
   });
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
