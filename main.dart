@@ -3,29 +3,28 @@ import 'dart:html';
 String genUrl(String name, String ip, String port) {
   return "https://lucas46521.github.io/AddExternalServer/?name=${name}&ip=${ip}&port=${port}";
 }
+void exportUrl() {
+  // Obter os valores dos campos de entrada
+  InputElement nameElement = querySelector("#name");
+  InputElement ipElement = querySelector("#ip");
+  InputElement portElement = querySelector("#port");
+
+  // Obter os valores dos campos de entrada
+  String name = nameElement.value;
+  String ip = ipElement.value;
+  String port = portElement.value;
+
+  // Gerar a URL com base nos valores dos campos de entrada
+  String url = genUrl(name, ip, port);
+
+  // Redirecionar o usuário para a URL gerada
+  window.location.href = url;
+}
 void main() {
   if (window.location.search.split("&").length >= 3) redirect();
   AnchorElement generateButton = querySelector("#generateButton");
   AnchorElement exportButton = querySelector("#exportButton");
   
-  // Evento de clique no botão "Exportar"
-  exportButton.onClick.listen((event) {
-    // Obter os valores dos campos de entrada
-    TextInputElement nameElement = querySelector("#name");
-    TextInputElement ipElement = querySelector("#ip");
-    TextInputElement portElement = querySelector("#port");
-
-    // Obter os valores dos campos de entrada
-    String name = nameElement.value;
-    String ip = ipElement.value;
-    String port = portElement.value;
-
-    // Gerar a URL com base nos valores dos campos de entrada
-    String url = generateUrl(name, ip, port);
-
-    // Atualizar o atributo href do botão "Exportar" com a URL gerada
-    exportButton.href = url;
-  });
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
     AnchorElement copyRedirectUrlTextButton = querySelector("#copyRedirectUrlTextButton");
