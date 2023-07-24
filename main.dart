@@ -9,7 +9,7 @@ void main() {
   AnchorElement exportButton = querySelector("#exportButton");
   
   // Evento de clique no botão "Exportar"
-  exportButton.onClick.listen((MouseEvent event) {
+  exportButton.onClick.listen((event) {
     // Obter os valores dos campos de entrada
     TextInputElement nameElement = querySelector("#name");
     TextInputElement ipElement = querySelector("#ip");
