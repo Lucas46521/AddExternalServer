@@ -9,13 +9,22 @@ void main() {
   ButtonElement exportButton = querySelector("#exportButton");
 
   // Evento de clique no botão "Exportar"
-  exportButton.onClick.listen((event) {
-    // Obter o texto da urlTextArea
-    TextAreaElement urlTextArea = querySelector("#urlText");
-    String link = urlTextArea.text;
+  exportButton.onClick.listen((MouseEvent event) {
+    // Obter os valores dos campos de entrada
+    TextInputElement nameElement = querySelector("#name");
+    TextInputElement ipElement = querySelector("#ip");
+    TextInputElement portElement = querySelector("#port");
 
-    // Redirecionar o usuário para o link obtido da urlTextArea
-    window.location.href = link;
+    // Obter os valores dos campos de entrada
+    String name = nameElement.value;
+    String ip = ipElement.value;
+    String port = portElement.value;
+
+    // Gerar a URL com base nos valores dos campos de entrada
+    String url = generateUrl(name, ip, port);
+
+    // Redirecionar o usuário para a URL gerada
+    window.location.href = url;
   });
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
