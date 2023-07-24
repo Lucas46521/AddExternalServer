@@ -24,7 +24,7 @@ void main() {
     String url = genUrl(name, ip, port);
 
     // Redirecionar o usuário para a URL gerada
-    window.location.href = url;
+    redirectToExternalPage(url);
   });
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
@@ -78,7 +78,9 @@ String generateRedirectUrlFromInput() {
 
   return generateRedirectUrl(nameElement.value, ipElement.value, portElement.value);
 }
-
+void redirectToExternalPage(String url) {
+  window.location.href = url;
+}
 void redirect() {
   var url = window.location.search.substring(1).split("&");
 
