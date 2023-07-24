@@ -21,10 +21,10 @@ void main() {
     String port = portElement.value;
 
     // Gerar a URL com base nos valores dos campos de entrada
-    String url = genUrl(name, ip, port);
+    String url = generateUrl(name, ip, port);
 
-    // Redirecionar o usuário para a URL gerada
-    return url;
+    // Atualizar o atributo href do botão "Exportar" com a URL gerada
+    exportButton.href = url;
   });
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
