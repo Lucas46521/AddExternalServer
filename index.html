@@ -11,6 +11,21 @@
     <title></title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+  function generateUrl() {
+    var name = document.getElementById("name").value;
+    var ip = document.getElementById("ip").value;
+    var port = document.getElementById("port").value;
+
+    var url = "https://lucas46521.github.io/AddExternalServer/?name=" + name + "&ip=" + ip + "&port=" + port;
+    return url;
+  }
+
+  document.getElementById("exportButton").addEventListener("click", function() {
+    var url = generateUrl();
+    window.location.href = url;
+  });
+</script>
 <body>
 <div style="text-align: center;">
     <div class="title">Adiciona Servidor Externo</div>
