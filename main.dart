@@ -1,25 +1,5 @@
 import 'dart:html';
 
-String genUrl(String name, String ip, String port) {
-  return "https://lucas46521.github.io/AddExternalServer/?name=${name}&ip=${ip}&port=${port}";
-}
-void exportUrl() {
-  // Obter os valores dos campos de entrada
-  InputElement nameElement = querySelector("#name");
-  InputElement ipElement = querySelector("#ip");
-  InputElement portElement = querySelector("#port");
-
-  // Obter os valores dos campos de entrada
-  String name = nameElement.value;
-  String ip = ipElement.value;
-  String port = portElement.value;
-
-  // Gerar a URL com base nos valores dos campos de entrada
-  String url = genUrl(name, ip, port);
-
-  // Redirecionar o usuário para a URL gerada
-  window.location.href = url;
-}
 void main() {
   if (window.location.search.split("&").length >= 3) redirect();
   AnchorElement generateButton = querySelector("#generateButton");
