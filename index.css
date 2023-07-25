@@ -139,7 +139,7 @@ textarea {
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
 
   /* Define o espaço interno igual à altura de uma linha de texto comum */
-  padding: 0;
+  padding:0 35px 0 5px;
   line-height: 1.5em; /* Ajuste esse valor conforme necessário */
   height: 1.5em; /* Ajuste esse valor conforme necessário */
 }
