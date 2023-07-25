@@ -104,8 +104,9 @@ button2{
     width: 35%;
     height: 35px;
     background: #fff;
-    color: #fff;
     border: none;
+    outline: none;
+    cursor: pointer;
     border-radius: 40px;
 }
 .register{
