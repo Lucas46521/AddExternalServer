@@ -140,8 +140,8 @@ textarea {
 
   /* Define o espaço interno igual à altura de uma linha de texto comum */
   padding:0 35px 0 5px;
-  line-height: 1.5em; /* Ajuste esse valor conforme necessário */
-  height: 1.5em; /* Ajuste esse valor conforme necessário */
+  line-height: 2em; /* Ajuste esse valor conforme necessário */
+  height: 2em; /* Ajuste esse valor conforme necessário */
 }
 table {
   display: inline;
