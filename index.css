@@ -137,7 +137,6 @@ button2 {
 
 /* Estilo para o campo de texto */
 textarea {
-  display: inline; /* Definindo o campo de texto como elemento inline */
   text-align: center;
   text-decoration: none;
   color: #FFF;
