@@ -11,21 +11,6 @@
     <title></title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-  function generateUrl() {
-    var name = document.getElementById("name").value;
-    var ip = document.getElementById("ip").value;
-    var port = document.getElementById("port").value;
-
-    var url = "https://lucas46521.github.io/AddExternalServer/?name=" + name + "&ip=" + ip + "&port=" + port;
-    return url;
-  }
-
-  document.getElementById("exportButton").addEventListener("click", function() {
-    var url = generateUrl();
-    window.location.href = url;
-  });
-</script>
 <body>
 <div style="text-align: center;">
     <div class="title">Adiciona Servidor Externo</div>
@@ -34,9 +19,9 @@
     <hr>
 
     <div>
-        <div class="coverInput"><label for="name"></label> <input id="name" type="text" placeholder="name" required></div>
-        <div class="coverInput"><label for="ip"></label> <input id="ip" type="text" placeholder="ip" required></div>
-        <div class="coverInput"><label for="port"></label> <input id="port" type="text" placeholder="port" required></div>
+        <div class="coverInput"><label for="name"></label> <input id="name" type="text" placeholder="name"></div>
+        <div class="coverInput"><label for="ip"></label> <input id="ip" type="text" placeholder="ip"></div>
+        <div class="coverInput"><label for="port"></label> <input id="port" type="text" placeholder="port"></div>
     </div>
     <a id="generateButton" class="button" style="width: 9%; margin-right: 10px;">Gerar</a>
     <a id="exportButton" class="button" style="width: 9%;">Exportar</a>
