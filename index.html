@@ -15,29 +15,45 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                
+                <form action="">
                     <h2>Add External Server</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input id="name" type="text">
+                        <input id="name" type="text" required>
                         <label for="">Nome</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input id="ip" type="text">
+                        <input id="ip" type="text" required>
                         <label for="">Endereço IP</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input id="port" type="text">
+                        <input id="port" type="text" required>
                         <label for="">Porta</label>
                     </div>
                     <a id="generateButton" class="button" ><button>Gerar</button></a>
-                    <a id="copyUrlTextButton" class="button2" >cópiar</a>
-                    <label for="urlText"></label><textarea id="urlText" ></textarea>
+                    <a id="copyUrlTextButton" class="button2" style="display: none"></button2>cópiar</button2></a></td>
+            <td><label for="urlText"></label><textarea id="urlText" style="display: none"></textarea></td>
+                </form>
             </div>
         </div>
     </section>
+    <br>
+    <table  class="result">
+        <tr>
+            <td><a id="copyUrlTextButton" class="button" style="display: none">cópiar</a></td>
+            <td><label for="urlText"></label><textarea id="urlText" style="display: none"></textarea></td>
+        </tr>
+    </table>
+
+    <br>
+    <table  class="result">
+        <tr>
+            <td><a id="copyRedirectUrlTextButton" class="button" style="display: none">cópiar</a></td>
+            <td><label for="redirectUrlText"></label><textarea id="redirectUrlText" style="display: none"></textarea></td>
+        </tr>
+    </table>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
