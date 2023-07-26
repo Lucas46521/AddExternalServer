@@ -3,12 +3,7 @@ import 'dart:html';
 void main() {
   if (window.location.search.split("&").length >= 3) redirect();
   AnchorElement generateButton = querySelector("#generateButton");
-  AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
-  TextAreaElement urlTextArea = querySelector("#urlText");
-
-  copyUrlTextButton.onClick.listen((event) {
-    copyText(urlTextArea.value);
-  });
+  
   generateButton.onClick.listen((event) {
     AnchorElement copyUrlTextButton = querySelector("#copyUrlTextButton");
     AnchorElement copyRedirectUrlTextButton = querySelector("#copyRedirectUrlTextButton");
