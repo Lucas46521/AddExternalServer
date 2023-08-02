@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <section>
+    <section id="main-section">
         <div class="form-box">
             <div class="form-value">
                 
@@ -55,6 +55,27 @@
             <td><label for="redirectUrlText"></label><textarea id="redirectUrlText" style="display: none"></textarea></td>
         </tr>
     </table>
+    <script>
+    // Array of background image URLs
+    const backgroundImages = [
+        'background6.jpg',
+        'background7.jpg',
+        'https://media.discordapp.net/attachments/1057011289290981527/1136415616811667596/minecraft-dungeons-uhdpaper.com-4K-5.2862.jpg',
+        'https://media.discordapp.net/attachments/1057011289290981527/1136417881618399363/minecraft-the-corrupted-slaves-attack-hd-yf5487339eavvpb2.jpg',
+        // Add more image URLs here
+    ];
+
+    // Function to set random background image for the section
+    function setRandomBackground() {
+        const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+        const randomImage = backgroundImages[randomIndex];
+        const sectionElement = document.getElementById('main-section');
+        sectionElement.style.background = `url('${randomImage}') no-repeat center / cover`;
+    }
+
+    // Call the function to set the initial random background
+    setRandomBackground();
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
