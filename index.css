@@ -11,9 +11,7 @@ section{
     min-height: 100vh;
     width: 100%;
     
-    background: url('background6.jpg')no-repeat;
-    background-position: center;
-    background-size: cover;
+    
 }
 .form-box{
     position: relative;
@@ -118,7 +116,7 @@ label {
   display: inline;
 }textarea {
   display: inline;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   color: #FFF;
   background: transparent;
