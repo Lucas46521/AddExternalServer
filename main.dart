@@ -15,6 +15,7 @@ void main() {
     redirectUrlTextArea.text = generateRedirectUrlFromInput();
 
     urlTextArea.style.display = "";
+    redirectUrlTextArea.style.display = "none";
     copyUrlTextButton.style.display = "";
     copyRedirectUrlTextButton.style.display = "";
 
