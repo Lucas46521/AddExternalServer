@@ -16,7 +16,7 @@ void main() {
 
     urlTextArea.style.display = "";
     copyUrlTextButton.style.display = "";
-    copyRedirectUrlTextButton.style.display = "";
+    
 
     copyUrlTextButton.onClick.listen((_) => copyText(urlTextArea.text));
     copyRedirectUrlTextButton.onClick.listen((_) => copyText(redirectUrlTextArea.text));
