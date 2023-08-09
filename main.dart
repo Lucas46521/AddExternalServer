@@ -15,8 +15,9 @@ void main() {
     redirectUrlTextArea.text = generateRedirectUrlFromInput();
 
     urlTextArea.style.display = "";
+    redirectUrlTextArea.style.display = "";
     copyUrlTextButton.style.display = "";
-    
+    copyRedirectUrlTextButton.style.display = "";
 
     copyUrlTextButton.onClick.listen((_) => copyText(urlTextArea.text));
     copyRedirectUrlTextButton.onClick.listen((_) => copyText(redirectUrlTextArea.text));
