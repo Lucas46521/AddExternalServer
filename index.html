@@ -4,66 +4,46 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="scaffolded-by" content="https://github.com/dart-lang/stagehand">
     <title>AddExternalServer</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAABEw38APWSbACquWAA5smUAPb9yACpIdwBjZWUANLhlAFbMlwArSHcAZWVlACxIdwAbLk0AJ6lWAEBloQBGy3oAP2ScAC25WwAsSXUALUl1AC9JdQAhL0sAKkp7AD5SbABRyYAAP2SdACpJdgAsSXYAHS9MAIaJjQAeL0wAHy9MACAvTAAcLk8AIS9MAE/SkQA6t2oAL6lYADFIcQBBZZsAQmWbAChJdwA+ZJ4AP2SeAFzboQAkrGEAPLxtAB0vTQBVhcUAKklvACumWQAyvmgARa12ACmpWQAfMVAANbdjACq6WwA+ZZwALKRfAC2sWQA9ZJ8AO8BzAFWBuACKi4kAGy9OAB8wSwAcsUwAIDBLAB4vTgBTz5MAP2WdABBGQAAXmUYAGjBMADCyYgBThsQAQ2KVADu2ZwBShccAGC5SADzCbwA+wm8AamViAEBlngAcMUoAgYaRADCyYwA+xHIAMbZgAFOGxQAusGkA////ADS3ZgBWz5UAHy5LAD/BcwA/YpcAGC9RAFKGxgBUhsYAHC9RABkuVAAwR3AAQGSaAErMjgAyuGQAP8V5AFGIwQBOx5QAMLNiACxKeQBEvIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKxtOEBALHSsQEBsLORBuZStbW1tbW1tbW1tbHBsUDhAbWxIbDBIoGRseWyAbYwEnG1sQGxBbWRsbG1sbGxswWStbGxBbW1sQChBbGxw8bmErWxtbW1tbWxxZWRsrEFUXK1scG1tbW1tbG1sbWVkaTBBbGxAbW1tbW1tbGxsbQGZZW1lZEBBbW1tbWysbG2cQYlsFBT8FG1tbW1tLG1MWYAlbW1tbOVtbW1tbRBsTKT4qCxBrQRALCxxBQQYbRjYxIlIVQy4VH0EyHCRJG14hJmhkLC04HDNUURhFIy87Qkc9TWxvAE9aOg1dCAQlaREDUFdfVko0NQcPalxYbQJINwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon" />
-    <script defer src="main.js"></script>
-    <script defer src="main.dart.js"></script>
-    <title></title>
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <section id="main-section">
         <div class="form-box">
             <div class="form-value">
+                <h2>Add External Server</h2>
+                <div class="inputbox">
+                    <ion-icon name="wifi"></ion-icon>
+                    <input id="name" type="text">
+                    <label for="">Nome</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="git-network"></ion-icon>
+                    <input id="ip" type="text">
+                    <label for="">Endereço IP</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="globe"></ion-icon>
+                    <input id="port" type="text">
+                    <label for="">Porta</label>
+                </div>
+                <a id="generateButton" class="button"><button>Gerar</button></a>
                 
-                    <h2>Add External Server</h2>
-                    <div class="inputbox">
-                        <ion-icon name="wifi"></ion-icon>
-                        <input id="name" type="text" >
-                        <label for="">Nome</label>
-                    </div>
-                    <div class="inputbox">
-                        <ion-icon name="git-network"></ion-icon>
-                        <input id="ip" type="text" >
-                        <label for="">Endereço IP</label>
-                    </div>
-                    <div class="inputbox">
-                        <ion-icon name="globe"></ion-icon>
-                        <input id="port" type="text" >
-                        <label for="">Porta</label>
-                    </div>
-                    <a id="generateButton" class="button" ><button>Gerar</button></a>
-                    <a id="copyUrlTextButton" class="button2" style="display: none"><button2>cópiar</button2></a>
-            <label for="urlText"></label><textarea readonly id="urlText" style="display: none"></textarea>
-                    <br>
-                    <a id="copyRedirectUrlTextButton" class="button2" style="display: none"></button2>cópiar</button2></a>
-            <label for="redirectUrlText"></label><textarea id="redirectUrlText" style="display: none"></textarea>
+    <div id="textAreaContainer" style="display: none;">
+    <textarea readonly id="urlText"></textarea>
+    <a id="error"></a>
+        <a id="copyUrlTextButton" class="button2"><ion-icon name="copy-outline"></ion-icon></a>
+        <a id="redirectButton" class="button3"><ion-icon name="share-outline"></ion-icon></a>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
     
-    <script>
-    // Array of background image URLs
-    const backgroundImages = [
-        'background6.jpg',
-        'https://media.discordapp.net/attachments/1057011289290981527/1136415616811667596/minecraft-dungeons-uhdpaper.com-4K-5.2862.jpg',
-        'https://media.discordapp.net/attachments/1057011289290981527/1136417881618399363/minecraft-the-corrupted-slaves-attack-hd-yf5487339eavvpb2.jpg',
-        // Add more image URLs here
-    ];
-
-    // Function to set random background image for the section
-    function setRandomBackground() {
-        const randomIndex = Math.floor(Math.random() * backgroundImages.length);
-        const randomImage = backgroundImages[randomIndex];
-        const sectionElement = document.getElementById('main-section');
-        sectionElement.style.background = `url('${randomImage}') no-repeat center / cover`;
-    }
-
-    // Call the function to set the initial random background
-    setRandomBackground();
-    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
