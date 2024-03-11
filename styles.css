@@ -1,98 +1,158 @@
-div.title {
-  color: #4acaa8;
-  font-size: 1.5em;
-  font-weight: 700;
-  line-height: 1em;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-div.subTitle {
-  color: #aaa;
-  position: relative;
-  font-size: 1em;
-  font-weight: 700;
-  margin-bottom: 20px;
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.descriptionText {
-  color: #aaa;
-  position: relative;
-  margin: 0 0 1.6875em 0;
-}
-label {
-  display: inline;
-}
-
-input[type='text'] {
-  height: 50px;
-  font: 15px/24px sans-serif;
-  box-sizing: border-box;
-  padding: 0.3em;
-  transition: 0.3s;
-  letter-spacing: 1px;
-  color: #03BE33;
-  border: 1px solid #4acaa8;
-  box-shadow: 1px 1px 2px 0 #707070 inset;
-  border-radius: 4px;
-  width: auto;
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-input[type='text']::placeholder {
-  color: #aaaaaa;
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
 }
 
-input[type='text']:-ms-input-placeholder {
-  color: #aaaaaa;
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
 }
 
-input[type='text']::-ms-input-placeholder {
-  color: #aaaaaa;
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
 }
 
-input[type='text']:focus {
-  outline: none;
-  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
 }
 
-a.button {
-  position: relative;
-  display: inline-block;
-  padding: 0.8em;
-  text-align: center;
-  text-decoration: none;
-  color: #FFF;
-  background: #4acaa8;
-  border-bottom: 2px solid #00838F;
-  border-radius: 4px;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+.inputbox input {
+    width: calc(100% - 40px); /* Ajustado para deixar espaço para o ícone */
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
 }
 
-a.button:active {
-  border-bottom: 2px solid #26C6DA;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
-}
-.coverInput {
-  margin-bottom: 20px;
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
 }
 
-textarea {
-  padding: 0.8em;
-  text-align: center;
-  text-decoration: none;
-  color: #FFF;
-  background: #2d7c6d;
-  border-bottom: 2px solid #00838F;
-  border-radius: 4px;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.button2:active {
+    border-bottom: 2px solid #26C6DA;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
 }
 
 table {
-  display: inline;
-  margin: 0;
+    display: inline;
+    margin: 0;
 }
 
-hr {
-  height: 3px;
-  border: none;
-  border-top: 3px #e3e3e3 solid;
+/* Estilo para a área de texto */
+textarea {
+    display: inline-block;
+    vertical-align: middle; /* Alinha verticalmente com os botões */
+    text-align: left;
+    text-decoration: none;
+    color: #FFF;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid #00838F;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    /* Define o espaço interno igual a 1,5 vezes a altura de uma linha de texto comum */
+    padding: 0;
+    line-height: 1.5em; /* Ajuste esse valor para 1,5 vezes a altura da linha de texto comum */
+    height: 1.5em; /* Ajuste esse valor para 1,5 vezes a altura da linha de texto comum */
+    /* Ajuste para baixar o campo de texto em relação ao botão */
+    margin-top: 4px;
+}
+
+/* Estilo para os botões */
+a.button2,a.button3 {
+    display: inline-block;
+    vertical-align: middle; /* Alinha verticalmente com a área de texto */
+    margin-left: 3px; /* Espaçamento entre os botões e a área de texto */
+    margin-top: 3px;
+    padding: 5px 8px;
+}
+
+a.button2 {
+    /* Estilos para o botão "Copiar" */
+    background-color: #FF5722; /* Cor de fundo */
+    color: #FFF; /* Cor do texto */
+    padding: 0.5px 4px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor do mouse */
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+a.button2:hover {
+    background-color: #E64A19; /* Cor de fundo ao passar o mouse */
+}
+
+a.button3 {
+    /* Estilos para o botão "Exportar" */
+    background-color: #4CAF50; /* Cor de fundo */
+    float: right;
+    color: #FFF; /* Cor do texto */
+    padding: 0.5px 4px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor do mouse */
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+a.button3:hover {
+    background-color: #45A049; /* Cor de fundo ao passar o mouse */
 }
