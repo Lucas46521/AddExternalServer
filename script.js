@@ -28,7 +28,7 @@ document.getElementById('generateButton').addEventListener('click', function() {
         urlParams.append('name', name);
         urlParams.append('ip', ip);
         urlParams.append('port', port);
-        const localUrl = window.location.origin + '/?' + urlParams.toString();
+        const localUrl = window.location.origin + '/AddExternalServer?' + urlParams.toString();
         const minecraftUrl = `minecraft:?addExternalServer=${name}|${ip}:${port}`;
         // const minecraftUrl = `minecraft://connect?type=server&ip=${ip}&port=${port}&name=${name}&world=minecraft:overworld`;
         
