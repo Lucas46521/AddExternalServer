@@ -6,6 +6,9 @@ const backgroundImages = [
     'back3.jpg',
     // Add more image URLs here
 ];
+function redirectToHome() {
+        window.location.href = "https://lucas46521.github.io/";
+}
 
 // Function to set random background image for the section
 function setRandomBackground() {
