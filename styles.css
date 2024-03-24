@@ -156,3 +156,27 @@ a.button3 {
 a.button3:hover {
     background-color: #45A049; /* Cor de fundo ao passar o mouse */
 }
+.home-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-button button {
+    background-color: #4D8CF0;
+    border: 2px solid #4D8CF0;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease;
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+.home-button button:hover {
+    transform: scale(1.1);
+}
+
+.home-button button:active {
+    transform: scale(0.9);
+}
