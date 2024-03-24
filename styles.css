@@ -158,10 +158,17 @@ a.button3:hover {
 }
 .home-button {
     text-align: center;
+    align-items: middle;
     margin-top: 20px;
+}
+.home-button ion-icon {
+  position: relative;
+  right: 12px;
+  bottom: 7px;
 }
 
 .home-button button {
+    width: 10%;
     background-color: #4D8CF0;
     border: 2px solid #4D8CF0;
     border-radius: 5px;
